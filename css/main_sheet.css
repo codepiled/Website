@@ -1,0 +1,77 @@
+* {
+	font-family: sans-serif;
+}
+
+#logo {
+	color: #BBBBBB;
+	margin: 10px 0 2px 9px;
+	float: left;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+h1{
+	text-decoration: underline;
+	font-size: 50;
+}
+
+#links a{
+	text-decoration: none;
+	font-size: 22;
+	text-align: left;
+}
+
+ul#folios a{
+	text-decoration: none;
+	color: black;
+}
+
+ul#folios{
+	list-style: none;
+	display: inline;
+}
+
+ul#folios li{
+	display: inline;
+	font-size: 60;
+	margin-right: 40px;
+}
+
+ul#nav{
+	list-style: none;
+	padding: 0;
+	display: inline;
+}
+
+ul#nav li{
+	display: inline;
+	margin-right: 10px;
+	text-decoration: bold;
+	
+	width: 100%;
+}
+
+ul#nav li#selected a{
+	text-decoration: italic;
+    color: black;
+    padding: 2px;
+    font-size: 25;
+    border: 2px solid black;
+    background-color: #FFFFFF;
+}
+
+ul#nav li#unselected a{
+	text-decoration: none;
+    color: white;
+    padding: 2px;
+    font-size: 25;
+    border: 2px solid black;
+    background-color: #AAAAAA;
+}

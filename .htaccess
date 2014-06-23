@@ -1,0 +1,11 @@
+DirectoryIndex index.html
+
+
+ErrorDocument 404 /notfound.html
+
+
+
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [L,R=301]

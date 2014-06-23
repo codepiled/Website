@@ -1,0 +1,14 @@
+* {
+	font-family: sans-serif;
+}
+body {
+	max-width:270px;
+	margin: 7% auto 0;
+	padding: 0;
+}
+#top {
+	color: #BBBBBB;
+}
+#bottom {
+	color: #777777;
+}
