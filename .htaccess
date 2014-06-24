@@ -1,9 +1,6 @@
 DirectoryIndex index.html
 
-
 ErrorDocument 404 /notfound.html
-
-
 
 
 RewriteEngine On

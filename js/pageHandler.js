@@ -103,6 +103,8 @@ $(document).ready(function() {
         $(this).css("margin-top", $(this).parent().height() - $(this).height());
     });
 
+
+
     // handle menu clicks
     $("ul#nav li a").click(function() {
         var self = $(this);
