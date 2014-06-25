@@ -1,7 +1,12 @@
 $(document).ready(function(animateArgs) {
+    $("#sidebar").affix({
+        offset: {
+            top: $("#header").offset().top + $("#header").height() - 25
+        }
+    });
 
     // Nav option clicks
-    $("ul#projnav li a").click(function() {
+    $("#sidebar a").click(function() {
         var href = $(this).attr("href");
 
         $("html, body").animate({
@@ -10,11 +15,8 @@ $(document).ready(function(animateArgs) {
         return false;
     });
 
-    // set equal height thumbnail images
-    $(document).ready(function() {
-        $(".thumbnail.small img").css({
-            "height": $(".thumbnail.small img").height()
-        });
+    $(".thumbnail.small img").css({
+        "height": $(".thumbnail.small img").height()
     });
 
     // Change the main display thumbnail on click
@@ -28,19 +30,5 @@ $(document).ready(function(animateArgs) {
 
         // Stop default href
         return false;
-    });
-
-    // Animate nav option to right
-    $("ul#projnav li a").mouseover(function() {
-        $(this).animate({
-            left: "+=10"
-        }, 100);
-    });
-
-    // Animate nav option back into place
-    $("ul#projnav li a").mouseout(function() {
-        $(this).animate({
-            left: "-=10"
-        }, 100);
     });
 });

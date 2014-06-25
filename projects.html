@@ -2,44 +2,49 @@
 
 <head>
     <title>Projects</title>
+    <style type="text/css">
+    @media (min-width: 979px) {
+        #sidebar.affix-top {
+            position: static;
+            width: auto;
+        }
+
+        #sidebar.affix {
+            position: fixed;
+            top: 25px;
+            width: 165px;
+        }
+    }
+    .affix, .affix-top {
+        position: static;
+        width: auto;
+    }
+    </style>
 </head>
 
 <body>
-    <center>
-        <div class="row">
+    <div class="container">
+        <div class="row" id="header">
             <div class="col-sm-3 col-md-2 animate"></div>
             <div class="col-sm-9 col-md-10 animate">
                 <div class="page-header">
-                    <h1 style="color: #FA7A6E">Projects
-                        <small>Some completed and ongoing projects</small>
-                    </h1>
+                    <center>
+                        <h1 style="color: #FA7A6E">Projects
+                            <small>Some completed and ongoing projects</small>
+                        </h1>
+                    </center>
                 </div>
             </div>
         </div>
-    </center>
 
-    <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-3 col-md-2 sidebar animate">
-                <center>
-                    <ul class="nav nav-sidebar affix" id="projnav" style="background-color:rgba(231, 231, 231, 0.7); padding: 15px;">
-                        <li class="sidebar-brand">
-                            <h2>
-                                <span class="label label-default">Navigation</span>
-                            </h2>
-                        </li>
-                        <hr style="border-color:#428bca; border-width:6px">
-
-                        <li><a href="#top">Top</a>
-                        </li>
-                        <li><a href="#colab">Collaborations</a>
-                        </li>
-                        <li><a href="#nolan">Nolan's Projects</a>
-                        </li>
-                        <li><a href="#trevor">Trevor's Projects</a>
-                        </li>
-                    </ul>
-                </center>
+            <div class="col-sm-3 col-md-2 animate">
+                <div class="list-group" id="sidebar">
+                    <a href="#top" class="list-group-item">Top</a>
+                    <a href="#colab" class="list-group-item">Collaborations</a>
+                    <a href="#nolan" class="list-group-item">Nolan's Projects</a>
+                    <a href="#trevor" class="list-group-item">Trevor's Projects</a>
+                </div>
             </div>
 
             <div class="col-sm-9 col-md-10 animate">
@@ -52,7 +57,7 @@
 
                     <div class="panel-body">
                         <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-sm-3 col-md-3">
                                 <div class="page-heading">
                                     <h2>
                                         Level Editor
