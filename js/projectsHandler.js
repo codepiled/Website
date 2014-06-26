@@ -11,7 +11,6 @@ $(document).ready(function(animateArgs) {
             newArg.thumbs++;
         });
         thumbArgs.push(newArg);
-        console.log("hello");
     });
 
     $("#sidebar").affix({
@@ -38,12 +37,22 @@ $(document).ready(function(animateArgs) {
 
     // Change the main display thumbnail on click
     $(".img-cycle a.small").click(function() {
-        var parent = $(this).closest(".img-cycle");
-        var parentInd = $(".img-cycle").index(parent);
-        var main = parent.find(".main img");
+        var root = $(this).closest(".img-cycle");
+        var thisInd = root.find(".thumbnails a").index($(this));
+        var parentInd = $(".img-cycle").index(root);
+        var thisArgs = thumbArgs[parentInd];
+
+        if (thisInd == thisArgs.selected) {
+            return false;
+        }
+
+        var main = root.find(".main img");
 
         main.attr("src", $(this).find("img").attr("src"));
-        thumbArgs[parentInd].selected = parent.find(".thumbnails a").index($(this));
+
+        $(this).toggleClass("active");
+        root.find(".thumbnails a:eq(" + thisArgs.selected + ")").toggleClass("active");
+        thisArgs.selected = root.find(".thumbnails a").index($(this));
 
         // Stop default href
         return false;
